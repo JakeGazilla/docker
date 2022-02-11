@@ -6,11 +6,11 @@ services:
     build: .
     ports:
       - '81:3000'
-    links:
+    external_links:
       - mongo
   mongo:
     container_name: mongo
     image: mongo
     ports:
-      - '27018:27017'
+      - '27017:27017'
 
